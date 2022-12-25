@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "15a9262c-6499-434d-bcbe-92f0e6050206",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9518923"
+	},
+	"item": [
+		{
+			"name": "GetProductList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/ReadProduct",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ReadProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Img\":\"\",\r\n    \"ProductCode\":\"\",\r\n    \"ProductName\":\"\",\r\n    \"Qty\":\"\",\r\n    \"TotalPrice\":\"\",\r\n    \"UnitPrice\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/CreateProduct",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CreateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Img\":\"\",\r\n    \"ProductCode\":\"\",\r\n    \"ProductName\":\"\",\r\n    \"Qty\":\"\",\r\n    \"TotalPrice\":\"\",\r\n    \"UnitPrice\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/UpdateProduct/6395ce12187245c05d68da82",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"UpdateProduct",
+						"6395ce12187245c05d68da82"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/DeleteProduct/639da5960817590a4e4fd53c",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"DeleteProduct",
+						"639da5960817590a4e4fd53c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
