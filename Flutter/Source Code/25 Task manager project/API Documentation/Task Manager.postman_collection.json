@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "9aa79862-ad7b-46f0-a419-7582888d70ee",
+		"name": "Task Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9518923"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"email\":\"rabbil@rabbil.com\",\r\n    \"firstName\":\"Rabbil\",\r\n    \"lastName\":\"Hasan\",\r\n    \"mobile\":\"01785388919\",\r\n    \"password\":\"1234\",\r\n    \"photo\":\"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/registration",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"rabbilidlc@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/login",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profileUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\":\"0170xxxxxxxx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/profileUpdate",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"profileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"My Task\",\r\n    \"description\":\"My Task\",\r\n    \"status\":\"New\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/createTask",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTaskStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/updateTaskStatus/62b7582fac0007cc76c29b53/Progress",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"updateTaskStatus",
+						"62b7582fac0007cc76c29b53",
+						"Progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listTaskByStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/listTaskByStatus/New",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"listTaskByStatus",
+						"New"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taskStatusCount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/taskStatusCount",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"taskStatusCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverVerifyEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/RecoverVerifyEmail/rabbilidlc@gmail.com",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverVerifyEmail",
+						"rabbilidlc@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverVerifyOTP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/RecoverVerifyOTP/rabbilidlc@gmail.com/3344",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverVerifyOTP",
+						"rabbilidlc@gmail.com",
+						"3344"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverResetPass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"\",\r\n    \"OTP\":\"\",\r\n    \"password\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/RecoverResetPass",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverResetPass"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://task.teamrabbil.com/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc3MzgzNTgsImRhdGEiOiJyYWJiaWxpZGxjQGdtYWlsLmNvbSIsImlhdCI6MTY1NzY1MTk1OH0.nxDpaIS68pFgpThzepNzGP5IpnBRpepJn2xzkfv7TvI",
+			"type": "string"
+		}
+	]
+}
