@@ -40,6 +40,7 @@ dependencies:
   http: ^0.13.5
   fluttertoast: ^8.1.2
   pin_code_fields: ^7.4.0
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
