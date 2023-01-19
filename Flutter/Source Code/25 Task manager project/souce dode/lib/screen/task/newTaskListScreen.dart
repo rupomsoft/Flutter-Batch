@@ -15,6 +15,11 @@ class _newTaskListScreenState extends State<newTaskListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+
+        ],
+      ),
       body: Center(
         child: Text("New Task"),
       ),
