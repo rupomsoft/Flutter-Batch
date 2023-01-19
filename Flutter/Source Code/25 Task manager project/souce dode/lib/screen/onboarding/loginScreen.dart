@@ -13,7 +13,6 @@ class _loginScreenState extends State<loginScreen> {
   Map<String,String> FormValues={"email":"", "password":""};
   bool Loading=false;
 
-
   InputOnChange(MapKey, Textvalue){
     setState(() {
       FormValues.update(MapKey, (value) => Textvalue);
@@ -39,7 +38,6 @@ class _loginScreenState extends State<loginScreen> {
       else{
         setState(() {Loading=false;});
       }
-
 
     }
   }
