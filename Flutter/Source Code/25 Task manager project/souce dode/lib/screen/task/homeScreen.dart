@@ -6,6 +6,7 @@ import '../../component/completedTaskList.dart';
 import '../../component/newTaskList.dart';
 import '../../component/appBottomNav.dart';
 import '../../component/progressTaskList.dart';
+import '../../utility/utility.dart';
 
 
 class homeScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class homeScreen extends StatefulWidget {
 class _homeScreenState extends State<homeScreen> {
 
   int TabIndex=0;
+  Map<String,String> ProfileData={"email":"","firstName":"","lastName":"","photo":DefaultProfilePic};
 
   onItemTapped(int index){
     setState(() {
@@ -32,10 +34,26 @@ class _homeScreenState extends State<homeScreen> {
   ];
 
 
+  ReadAppBarData() async {
+  String? email= await ReadUserData('email');
+  String? firstName= await ReadUserData('firstName');
+  String? lastName= await ReadUserData('lastName');
+  String? photo= await ReadUserData('photo');
+  setState(() {
+    ProfileData={"email":'$email',"firstName":'$firstName',"lastName":'$lastName',"photo":'$photo'};
+  });
+  }
+
+  @override
+  void initState() {
+    ReadAppBarData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TaskAppBar(context),
+      appBar: TaskAppBar(context,ProfileData),
       body: widgetOptions.elementAt(TabIndex),
       bottomNavigationBar: appBottomNav(TabIndex,onItemTapped),
     );
