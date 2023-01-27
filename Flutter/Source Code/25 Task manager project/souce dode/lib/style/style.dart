@@ -127,6 +127,15 @@ ButtonStyle AppButtonStyle(){
   );
 }
 
+ButtonStyle AppStatusButtonStyle(colorRed){
+  return ElevatedButton.styleFrom(
+      elevation: 1,
+      padding: EdgeInsets.zero,
+      backgroundColor: colorRed,
+  );
+}
+
+
 TextStyle ButtonTextStyle(){
   return TextStyle(
       fontSize: 14,
@@ -157,7 +166,7 @@ Container StatusChild(statusText,statusColor){
       color: statusColor,
     ),
     height: 20,
-    width: 50,
+    width: 60,
   );
 }
 
