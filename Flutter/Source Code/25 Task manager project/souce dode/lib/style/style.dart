@@ -75,7 +75,7 @@ TextStyle Head9Text(textColor){
       color: textColor,
       fontSize: 9,
       fontFamily: 'poppins',
-      fontWeight: FontWeight.w400
+      fontWeight: FontWeight.w500
   );
 }
 
@@ -145,6 +145,19 @@ Ink SuccessButtonChild(String ButtonText){
       alignment: Alignment.center,
       child:Text(ButtonText,style: ButtonTextStyle(),),
     ),
+  );
+}
+
+Container StatusChild(statusText,statusColor){
+  return  Container(
+    alignment: Alignment.center,
+    child:Text(statusText,style: TextStyle(color: colorWhite,fontSize: 10,fontWeight: FontWeight.w400)),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      color: statusColor,
+    ),
+    height: 20,
+    width: 50,
   );
 }
 
