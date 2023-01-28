@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9aa79862-ad7b-46f0-a419-7582888d70ee",
+		"_postman_id": "868668b8-90ea-4933-9644-d14e84d85189",
 		"name": "Task Manager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9518923"
@@ -159,13 +159,37 @@
 					}
 				],
 				"url": {
-					"raw": "{{BaseURL}}/listTaskByStatus/New",
+					"raw": "{{BaseURL}}/listTaskByStatus/Completed",
 					"host": [
 						"{{BaseURL}}"
 					],
 					"path": [
 						"listTaskByStatus",
-						"New"
+						"Completed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/deleteTask/id",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"deleteTask",
+						"id"
 					]
 				}
 			},
@@ -286,7 +310,7 @@
 		},
 		{
 			"key": "token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc3MzgzNTgsImRhdGEiOiJyYWJiaWxpZGxjQGdtYWlsLmNvbSIsImlhdCI6MTY1NzY1MTk1OH0.nxDpaIS68pFgpThzepNzGP5IpnBRpepJn2xzkfv7TvI",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQ5MDY2NjgsImRhdGEiOiJyYWJiaWxpZGxjQGdtYWlsLmNvbSIsImlhdCI6MTY3NDgyMDI2OH0.NoTe0UvmPfAcqSQi3VgZstLP5T8lIjn1Q0pv05d6yMI",
 			"type": "string"
 		}
 	]
