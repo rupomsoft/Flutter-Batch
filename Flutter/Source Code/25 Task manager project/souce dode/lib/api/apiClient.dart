@@ -110,9 +110,6 @@ Future<List> TaskListRequest(Status) async {
   }
 }
 
-
-
-
 Future<bool> TaskCreateRequest(FormValues) async {
 
   var URL=Uri.parse("${BaseURL}/createTask");
@@ -133,3 +130,40 @@ Future<bool> TaskCreateRequest(FormValues) async {
     return false;
   }
 }
+
+
+Future<bool> TaskDeleteRequest(id) async {
+  var URL=Uri.parse("${BaseURL}/deleteTask/${id}");
+  String? token= await ReadUserData("token");
+  var RequestHeaderWithToken={"Content-Type":"application/json","token":'$token'};
+  var response= await http.get(URL,headers:RequestHeaderWithToken);
+  var ResultCode=response.statusCode;
+  var ResultBody=json.decode(response.body);
+  if(ResultCode==200 && ResultBody['status']=="success"){
+    SuccessToast("Request Success");
+    return true;
+  }
+  else{
+    ErrorToast("Request fail ! try again");
+    return false;
+  }
+}
+
+
+Future<bool> TaskUpdateRequest(id,status) async {
+  var URL=Uri.parse("${BaseURL}/updateTaskStatus/${id}/${status}");
+  String? token= await ReadUserData("token");
+  var RequestHeaderWithToken={"Content-Type":"application/json","token":'$token'};
+  var response= await http.get(URL,headers:RequestHeaderWithToken);
+  var ResultCode=response.statusCode;
+  var ResultBody=json.decode(response.body);
+  if(ResultCode==200 && ResultBody['status']=="success"){
+    SuccessToast("Request Success");
+    return true;
+  }
+  else{
+    ErrorToast("Request fail ! try again");
+    return false;
+  }
+}
+

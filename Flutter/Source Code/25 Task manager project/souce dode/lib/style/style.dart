@@ -127,11 +127,11 @@ ButtonStyle AppButtonStyle(){
   );
 }
 
-ButtonStyle AppStatusButtonStyle(colorRed){
+ButtonStyle AppStatusButtonStyle(btnColor){
   return ElevatedButton.styleFrom(
       elevation: 1,
       padding: EdgeInsets.zero,
-      backgroundColor: colorRed,
+      backgroundColor: btnColor,
   );
 }
 
