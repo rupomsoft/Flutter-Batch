@@ -1,0 +1,471 @@
+{
+	"info": {
+		"_postman_id": "382784dc-4396-4395-8815-f170344bc0fb",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9518923"
+	},
+	"item": [
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "BrandList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/BrandList",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"BrandList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "CategoryList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/CategoryList",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CategoryList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/UserLogin/engr.rabbil@yahoo.com",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"UserLogin",
+								"engr.rabbil@yahoo.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyLogin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/VerifyLogin/engr.rabbil@yahoo.com/2777",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"VerifyLogin",
+								"engr.rabbil@yahoo.com",
+								"2777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"aasdadsd\",\r\n    \"lastName\":\"asd\",\r\n    \"mobile\":\"asd\",\r\n    \"city\":\"asd\",\r\n    \"shippingAddress\":\"asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/CreateProfile",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CreateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE}}/ReadProfile",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ReadProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "ListProductByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ListProductByCategory/6",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ListProductByCategory",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListProductByBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ListProductByBrand/5",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ListProductByBrand",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListProductByRemark",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ListProductByRemark/special",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ListProductByRemark",
+								"special"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ProductDetails/id",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ProductDetails",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProductReview",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\r\n    \"product_id\":7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/CreateProductReview",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CreateProductReview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListReviewByProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ListReviewByProduct/7",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ListReviewByProduct",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ProductDetailsById/1",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ProductDetailsById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListProductSlider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/ListProductSlider",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ListProductSlider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductWishList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE}}/ProductWishList",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"ProductWishList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateWishList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE}}/CreateWishList/99",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CreateWishList",
+								"99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCartList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":4,\r\n    \"color\":\"Red\",\r\n    \"size\":\"X\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/CreateCartList",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CreateCartList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CartList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE}}/CartList",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"CartList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCartList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE}}/DeleteCartList/20",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"DeleteCartList",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE",
+			"value": "http://127.0.0.1:8001/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyRW1haWwiOiJlbmdyLnJhYmJpbEB5YWhvby5jb20iLCJpYXQiOjE2NzY2NTE5MzgsIm5iZiI6MTY3NjY1MTk0MSwiZXhwIjoxNjc2NzM4MzM4fQ.KVC0HZUqLKlRlheNSIw052QmH-J-c-vVtmw27NSavB8",
+			"type": "string"
+		}
+	]
+}
