@@ -77,14 +77,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE}}/VerifyLogin/engr.rabbil@yahoo.com/2777",
+							"raw": "{{BASE}}/VerifyLogin/engr.rabbil@yahoo.com/6005",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"VerifyLogin",
 								"engr.rabbil@yahoo.com",
-								"2777"
+								"6005"
 							]
 						}
 					},
@@ -103,7 +103,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\":\"aasdadsd\",\r\n    \"lastName\":\"asd\",\r\n    \"mobile\":\"asd\",\r\n    \"city\":\"asd\",\r\n    \"shippingAddress\":\"asd\"\r\n}",
+							"raw": "{\r\n    \"firstName\":\"Rabbil\",\r\n    \"lastName\":\"Hasan\",\r\n    \"mobile\":\"01785388919\",\r\n    \"city\":\"Dhaka\",\r\n    \"shippingAddress\":\"Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -174,13 +174,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE}}/ListProductByBrand/5",
+							"raw": "{{BASE}}/ListProductByBrand/3",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"ListProductByBrand",
-								"5"
+								"3"
 							]
 						}
 					},
@@ -205,18 +205,18 @@
 					"response": []
 				},
 				{
-					"name": "ProductDetails",
+					"name": "ProductDetailsById",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE}}/ProductDetails/id",
+							"raw": "{{BASE}}/ProductDetailsById/2",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
-								"ProductDetails",
-								"id"
+								"ProductDetailsById",
+								"2"
 							]
 						}
 					},
@@ -267,24 +267,6 @@
 							"path": [
 								"ListReviewByProduct",
 								"7"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "ProductDetailsById",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BASE}}/ProductDetailsById/1",
-							"host": [
-								"{{BASE}}"
-							],
-							"path": [
-								"ProductDetailsById",
-								"1"
 							]
 						}
 					},
@@ -464,7 +446,7 @@
 		},
 		{
 			"key": "token",
-			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyRW1haWwiOiJlbmdyLnJhYmJpbEB5YWhvby5jb20iLCJpYXQiOjE2NzY2NTE5MzgsIm5iZiI6MTY3NjY1MTk0MSwiZXhwIjoxNjc2NzM4MzM4fQ.KVC0HZUqLKlRlheNSIw052QmH-J-c-vVtmw27NSavB8",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyRW1haWwiOiJlbmdyLnJhYmJpbEB5YWhvby5jb20iLCJpYXQiOjE2NzY4MTY4MjAsIm5iZiI6MTY3NjgxNjgyMywiZXhwIjoxNjc2OTAzMjIwfQ.5vgvlUiYd_Ag2ChyotOH9Begp_Gkn8qyfbyb6-ubZ5s",
 			"type": "string"
 		}
 	]
