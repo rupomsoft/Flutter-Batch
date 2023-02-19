@@ -459,7 +459,7 @@
 	"variable": [
 		{
 			"key": "BASE",
-			"value": "http://127.0.0.1:8001/api",
+			"value": "https://craftybay.teamrabbil.com/api",
 			"type": "string"
 		},
 		{
